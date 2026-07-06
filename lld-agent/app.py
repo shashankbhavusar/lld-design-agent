@@ -18,6 +18,8 @@ initial_state = {
 result = graph.invoke(initial_state)
 
 print("\nRESULT\n")
-project_analysis = result["project_analysis"]
+plan = result["execution_plan"]
 
-print(project_analysis)
+print(plan.tasks)
+
+print(plan.reasoning)
