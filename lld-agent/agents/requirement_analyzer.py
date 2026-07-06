@@ -1,5 +1,5 @@
 from llm.groq_client import llm
-from models.requirement_models import RequirementAnalysis
+from models.requirement_models import ProjectAnalysis
 from prompts.requirement_prompt import SYSTEM_PROMPT
 from state import LLDState
 
@@ -7,7 +7,7 @@ from state import LLDState
 def requirement_analyzer(state: LLDState):
 
     structured_llm = llm.with_structured_output(
-        RequirementAnalysis
+        ProjectAnalysis
     )
 
     response = structured_llm.invoke(
@@ -25,6 +25,6 @@ def requirement_analyzer(state: LLDState):
 
     )
 
-    state["requirements"] = response
+    state["project_analysis"] = response
 
     return state

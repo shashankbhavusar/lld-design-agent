@@ -2,7 +2,7 @@ from parsers import extract_text
 from graph import graph
 
 
-text = extract_text("sample_requirement.pdf")
+text = extract_text("ba_requirement.txt")
 
 initial_state = {
     "input_text": text,
@@ -18,4 +18,6 @@ initial_state = {
 result = graph.invoke(initial_state)
 
 print("\nRESULT\n")
-print(result["requirements"])
+project_analysis = result["project_analysis"]
+
+print(project_analysis)

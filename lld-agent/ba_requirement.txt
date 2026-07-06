@@ -1,0 +1,187 @@
+# Business Requirements Document (BRD)
+
+## Employee Leave Management System
+
+**Project Name:** Employee Leave Management System (ELMS)
+**Version:** 1.0
+**Prepared By:** Business Analysis Team
+**Date:** July 2026
+
+---
+
+# 1. Business Background
+
+ABC Technologies currently manages employee leave requests through email communications and manually maintained spreadsheets. This process often results in delayed approvals, inaccurate leave balance calculations, and limited visibility into employee availability.
+
+To improve operational efficiency and employee experience, the organization intends to implement a centralized Leave Management System that enables employees to submit leave requests digitally while allowing managers and HR personnel to review and process requests through a standardized workflow.
+
+---
+
+# 2. Business Objective
+
+The proposed solution aims to:
+
+* Eliminate manual leave processing.
+* Reduce approval turnaround time.
+* Improve visibility into employee leave schedules.
+* Maintain accurate leave balances.
+* Provide a transparent approval process.
+* Generate reports for HR and management.
+
+---
+
+# 3. Stakeholders
+
+| Stakeholder          | Responsibility                               |
+| -------------------- | -------------------------------------------- |
+| Employees            | Submit and track leave requests              |
+| Reporting Managers   | Review and approve leave requests            |
+| HR Team              | Define leave policies and monitor compliance |
+| System Administrator | Manage users and system configuration        |
+
+---
+
+# 4. Business Scope
+
+The application shall support the complete lifecycle of employee leave management, including leave application, approval, cancellation, balance tracking, notifications, and reporting.
+
+The initial release will support web access for all employees. Mobile support may be considered in a future phase.
+
+---
+
+# 5. Business Requirements
+
+### BR-001 Employee Login
+
+Employees shall be able to securely access the application using their company credentials.
+
+---
+
+### BR-002 View Leave Information
+
+Employees shall be able to:
+
+* View available leave balance.
+* View leave history.
+* View upcoming public holidays.
+* View the status of submitted leave requests.
+
+---
+
+### BR-003 Apply for Leave
+
+Employees shall be able to submit a leave request by providing:
+
+* Leave category
+* Start date
+* End date
+* Reason for leave
+
+The system shall validate that sufficient leave balance exists before the request is submitted.
+
+---
+
+### BR-004 Leave Approval Process
+
+Once a leave request is submitted:
+
+* The reporting manager shall receive a notification.
+* The manager shall review the request.
+* The manager may approve or reject the request.
+* The manager may include comments explaining the decision.
+
+Employees shall be notified once a decision has been made.
+
+---
+
+### BR-005 Leave Cancellation
+
+Employees shall be able to cancel leave requests that have not yet started.
+
+Cancelled requests shall update the employee's leave balance accordingly.
+
+---
+
+### BR-006 Leave Balance
+
+The application shall maintain leave balances automatically.
+
+Employees shall always be able to view their current leave entitlement and available balance.
+
+---
+
+### BR-007 HR Administration
+
+HR users shall be able to:
+
+* Create employee records.
+* Update employee information.
+* Configure leave types.
+* Define annual leave entitlements.
+* Configure company holidays.
+* Generate organizational leave reports.
+
+---
+
+### BR-008 Notifications
+
+The application shall notify users whenever:
+
+* A leave request is submitted.
+* A request is approved.
+* A request is rejected.
+* A leave request is cancelled.
+
+Notifications shall be delivered through email and within the application.
+
+---
+
+# 6. Business Rules
+
+* Employees cannot request leave for dates in the past.
+* Leave requests must specify a valid reason.
+* Employees cannot exceed their available leave balance.
+* Managers cannot approve their own leave requests.
+* HR may adjust leave balances when approved by company policy.
+* Company holidays shall not be deducted from leave balances.
+* Weekend days shall not be counted for leave types where company policy excludes weekends.
+
+---
+
+# 7. Assumptions
+
+* All employees have a designated reporting manager.
+* Employee information is maintained in the organization's HR system.
+* Company holiday calendars are updated annually by HR.
+* Email services are available for sending notifications.
+
+---
+
+# 8. Success Criteria
+
+The project will be considered successful when:
+
+* Employees can submit leave requests without manual intervention.
+* Managers can process leave requests through the application.
+* Leave balances are updated automatically after approvals.
+* HR can generate accurate leave reports.
+* Employees have visibility into the status of every leave request.
+* Manual spreadsheet-based leave tracking is discontinued.
+
+---
+
+# 9. Out of Scope
+
+The following items are not included in this phase:
+
+* Payroll processing
+* Attendance management
+* Mobile application
+* Integration with third-party calendar applications
+* Biometric attendance tracking
+
+---
+
+# 10. Sample Business Scenario
+
+An employee plans to take annual leave for five working days. The employee logs into the Leave Management System, reviews the available leave balance, and submits a leave request with the required details. The reporting manager receives a notification, reviews the request, and approves it. The employee is informed of the approval, and the leave balance is automatically updated. HR can view the approved request in organizational reports without performing any manual updates.

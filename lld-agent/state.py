@@ -1,9 +1,9 @@
 from typing import TypedDict
-from models.requirement_models import RequirementAnalysis
+from models.requirement_models import ProjectAnalysis
 
 class LLDState(TypedDict):
     input_text: str
-    requirements: RequirementAnalysis | None
+    project_analysis: ProjectAnalysis | None
     plan: dict
     # outputs
     flow_dot: str

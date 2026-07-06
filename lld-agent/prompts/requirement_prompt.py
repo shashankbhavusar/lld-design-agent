@@ -3,14 +3,21 @@ You are a senior business analyst.
 
 Analyze the requirement document.
 
-Extract:
+Determine:
 
-- Project name
+- Project Name
 - Summary
-- Functional requirements
-- Non-functional requirements
+- Project Type
+- Complexity
+- Major Modules
+- Target Users
+- Functional Requirements
+- Non Functional Requirements
+- External Dependencies
 - Assumptions
 
+Infer missing information only if it is obvious.
+Do not hallucinate features.
 If something is missing,
 make reasonable assumptions.
 
